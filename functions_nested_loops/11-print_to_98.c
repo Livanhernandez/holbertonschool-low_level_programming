@@ -2,8 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - prints natural number to 98 in order 
- * separated by a comma and space.
+ * print_to_98 - prints natural number to 98 in order separated by a comma
  *
  * @n: number to start
  */
