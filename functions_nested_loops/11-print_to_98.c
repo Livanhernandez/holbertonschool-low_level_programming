@@ -3,7 +3,7 @@
 
 /**
  * print_to_98 - prints natural number to 98 in order 
- * 		separated by a comma and space.
+ * separated by a comma and space.
  *
  * @n: number to start
  */
