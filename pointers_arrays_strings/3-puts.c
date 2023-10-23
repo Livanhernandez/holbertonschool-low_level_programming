@@ -3,7 +3,7 @@
 /**
  * _puts - output of character and strings
  * @str: string
- * Return: 
+ * Return: str quote
  */
 
 void _puts(char *str)
