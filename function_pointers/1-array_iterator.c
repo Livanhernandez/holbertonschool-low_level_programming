@@ -1,32 +1,23 @@
 #include "function_pointers.h"
-#include <stdlib.h>
+#include <stddef.h>
 /**
- * int_index - searches for an integer
- * @array: array
- * @size: number of elements in the array
- * @cmp: pointer to the function used to compare vlues
- * Return: depends of matching
+ * array_iterator -function that executes a function given
+ *  as a parameter on each element of an array.
+ *  @array: pointer
+ *  @size: size of the array
+ *  @action: pointer to function
+ *  Return: {}
  */
-int int_index(int *array, int size, int (*cmp)(int))
+void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i;
+	size_t i;
+	void (*a)(int);
 
-	if (size <= 0)
+	if (array != NULL && action != NULL)
 	{
-		return (-1);
-	}
-	if (array == NULL || cmp == NULL)
-		{
-			return (-1);
-		}
+		a = action;
+
 		for (i = 0; i < size; i++)
-	{
-		(*cmp)(array[i]);
-
-		if ((*cmp)(array[i]) != 0)
-		{
-			return (i);
-		}
+			(*a)(array[i]);
 	}
-	return (-1);
 }
