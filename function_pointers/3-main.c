@@ -1,45 +1,36 @@
-#include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "3-calc.h"
+
 /**
- * main - Entry point
- * @argc: argument cout
- * @argv: array of arguments
- * Return: .
+ * main - entry point
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: the job has been finished
  */
+
 int main(int argc, char *argv[])
 {
-	int a, b, c;
-	char *s;
+	int v;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-
-	if (*argv[3] == '0')
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
-
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-	s = argv[2];
-
-	if (*s == '+' || *s == '-' || *s == '/' || *s == '*' || *s == '%')
-	{
-		c = get_op_func(s)(a, b);
-
-		printf("%d\n", c);
-	}
-	else
+	if ((argv[2][1] != 0) || ((argv[2][0] != '+') &&  (argv[2][0] != '-')
+		&& (argv[2][0] != '*') && (argv[2][0] != '/') && (argv[2][0] != '%')))
 	{
 		printf("Error\n");
 		exit(99);
 	}
-
+	if ((argv[2][0] == '/' || (argv[2][0] == '%')) && atoi(argv[3]) == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	v = get_op_func(argv[2]) (atoi(argv[1]), atoi(argv[3]));
+			printf("%d\n", v);
 	return (0);
 }

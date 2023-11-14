@@ -1,30 +1,66 @@
 #include "3-calc.h"
-#include <stdio.h>
-#include <stdlib.h>
+
 /**
- * op-add - sums
- * op_sub - return de difrence
- * op_mul - rturn a & b
- * op_div - returns de result of the division
- * op_mod - return the reminder
- * Return: results
+ * op_add - addition operation
+ * @a: first term
+ * @b: second term
+ *
+ * Return: result
  */
+
 int op_add(int a, int b)
 {
 	return (a + b);
 }
+
+/**
+ * op_sub - subtraction operation
+ * @a: first term
+ * @b: second term
+ *
+ * Return: result
+ */
+
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+
+/**
+ * op_mul - multiplication operation
+ * @a: first term
+ * @b: second term
+ *
+ * Return: result
+ */
+
 int op_mul(int a, int b)
 {
 	return (a * b);
 }
-int op_sub (int a, int b)
-{
-	return (a - b);
-}
+
+/**
+ * op_div - division operation
+ * @a: first term
+ * @b: second term
+ *
+ * Return: result
+ */
+
 int op_div(int a, int b)
 {
 	return (a / b);
 }
+
+
+/**
+ * op_mod - modulo operation
+ * @a: first term
+ * @b: second term
+ *
+ * Return: result
+ */
+
 int op_mod(int a, int b)
 {
 	return (a % b);
