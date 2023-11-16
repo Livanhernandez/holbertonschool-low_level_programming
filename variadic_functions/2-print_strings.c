@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * print_string - prints strings followed by new line
+ * print_strings - prints strings followed by new line
  * @separator: string
  * @n: parameter
  * Description: If separator NULL, not print.
