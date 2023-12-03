@@ -2,6 +2,7 @@
 /**
  * add_dnodeint - add new node.
  * @head: Pointer.
+ * @n: variable.
  * Return: new node.
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
@@ -10,7 +11,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	if (new_node == NULL)
 	{
-		fprintf(stderr, "Error: Can't malloc\n");
+		return (NULL);
 	}
 
 	new_node->n = n;
